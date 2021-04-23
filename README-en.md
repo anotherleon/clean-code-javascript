@@ -15,7 +15,7 @@
 11. [Comments](#comments)
 12. [Translation](#translation)
 
-## 介绍
+## Introduction
 
 ![Humorous image of software quality estimation as a count of how many expletives
 you shout when reading code](https://www.osnews.com/images/comics/wtfm.jpg)
@@ -43,9 +43,9 @@ shaped into its final form. Finally, we chisel away the imperfections when
 we review it with our peers. Don't beat yourself up for first drafts that need
 improvement. Beat up the code instead!
 
-## **变量**
+## **Variables**
 
-### 使用有意义和可发音的的变量名字
+### Use meaningful and pronounceable variable names
 
 **Bad:**
 
