@@ -2,11 +2,11 @@
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Variables](#variables)
-3. [Functions](#functions)
-4. [Objects and Data Structures](#objects-and-data-structures)
-5. [Classes](#classes)
+1. [介绍](#introduction)
+2. [变量](#variables)
+3. [函数]](#functions)
+4. [对象和数据结构](#objects-and-data-structures)
+5. [类](#classes)
 6. [SOLID](#solid)
 7. [Testing](#testing)
 8. [Concurrency](#concurrency)
@@ -61,7 +61,7 @@ const currentDate = moment().format("YYYY/MM/DD");
 
 **[⬆ back to top](#table-of-contents)**
 
-### Use the same vocabulary for the same type of variable
+### 对相同类型的变量使用相同的词汇
 
 **Bad:**
 
@@ -79,7 +79,7 @@ getUser();
 
 **[⬆ back to top](#table-of-contents)**
 
-### Use searchable names
+### 使用方便搜索的变量名
 
 We will read more code than we will ever write. It's important that the code we
 do write is readable and searchable. By _not_ naming variables that end up
@@ -107,7 +107,7 @@ setTimeout(blastOff, MILLISECONDS_IN_A_DAY);
 
 **[⬆ back to top](#table-of-contents)**
 
-### Use explanatory variables
+### 使用便于解释的变量名
 
 **Bad:**
 
@@ -128,7 +128,7 @@ saveCityZipCode(city, zipCode);
 
 **[⬆ back to top](#table-of-contents)**
 
-### Avoid Mental Mapping
+### 在遍历中用好记的变量名
 
 Explicit is better than implicit.
 
@@ -163,7 +163,7 @@ locations.forEach((location) => {
 
 **[⬆ back to top](#table-of-contents)**
 
-### Don't add unneeded context
+### 不用添加无意义的上下文
 
 If your class/object name tells you something, don't repeat that in your
 variable name.
@@ -198,7 +198,7 @@ function paintCar(car) {
 
 **[⬆ back to top](#table-of-contents)**
 
-### Use default arguments instead of short circuiting or conditionals
+### 使用默认参数而不是短路运算符
 
 Default arguments are often cleaner than short circuiting. Be aware that if you
 use them, your function will only provide default values for `undefined`
@@ -224,9 +224,9 @@ function createMicrobrewery(name = "Hipster Brew Co.") {
 
 **[⬆ back to top](#table-of-contents)**
 
-## **Functions**
+## **函数**
 
-### Function arguments (2 or fewer ideally)
+### 函数参数最好少于 2 个
 
 Limiting the amount of function parameters is incredibly important because it
 makes testing your function easier. Having more than three leads to a
@@ -280,7 +280,7 @@ createMenu({
 
 **[⬆ back to top](#table-of-contents)**
 
-### Functions should do one thing
+### 一个函数只做一件事
 
 This is by far the most important rule in software engineering. When functions
 do more than one thing, they are harder to compose, test, and reason about.
@@ -316,7 +316,7 @@ function isActiveClient(client) {
 
 **[⬆ back to top](#table-of-contents)**
 
-### Function names should say what they do
+### 函数名应该能体现出它要做的事情
 
 **Bad:**
 
@@ -344,7 +344,7 @@ addMonthToDate(1, date);
 
 **[⬆ back to top](#table-of-contents)**
 
-### Functions should only be one level of abstraction
+### 函数内应该只有一层抽象，应该把较大函数拆分为更小的功能
 
 When you have more than one level of abstraction your function is usually
 doing too much. Splitting up functions leads to reusability and easier
@@ -416,7 +416,7 @@ function parse(tokens) {
 
 **[⬆ back to top](#table-of-contents)**
 
-### Remove duplicate code
+### 避免重复的代码
 
 Do your absolute best to avoid duplicate code. Duplicate code is bad because it
 means that there's more than one place to alter something if you need to change
@@ -502,7 +502,7 @@ function showEmployeeList(employees) {
 
 **[⬆ back to top](#table-of-contents)**
 
-### Set default objects with Object.assign
+### 使用 Object.assign 为对象设置默认值
 
 **Bad:**
 
@@ -554,7 +554,7 @@ createMenu(menuConfig);
 
 **[⬆ back to top](#table-of-contents)**
 
-### Don't use flags as function parameters
+### 不用使用标志位作为函数参数（那意味着你的函数做的事情多于一件）
 
 Flags tell your user that this function does more than one thing. Functions should do one thing. Split out your functions if they are following different code paths based on a boolean.
 
